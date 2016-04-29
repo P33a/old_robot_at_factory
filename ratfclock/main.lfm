@@ -1,0 +1,283 @@
+object FMain: TFMain
+  Left = 286
+  Height = 549
+  Top = 111
+  Width = 628
+  Caption = 'robot@factory 20XX'
+  ClientHeight = 530
+  ClientWidth = 628
+  Menu = MainMenu
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '1.2.0.3'
+  object BGlobalStart: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Global Start'
+    OnClick = BGlobalStartClick
+    TabOrder = 0
+  end
+  object LabelClock: TLabel
+    Left = 96
+    Height = 217
+    Top = 0
+    Width = 528
+    Caption = '10:00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -192
+    Font.Name = 'Liberation Sans Narrow'
+    Font.Pitch = fpVariable
+    ParentColor = False
+    ParentFont = False
+  end
+  object BGlobalPause: TButton
+    Left = 8
+    Height = 25
+    Top = 40
+    Width = 75
+    Caption = 'Pause'
+    OnClick = BGlobalPauseClick
+    TabOrder = 1
+  end
+  object BGlobalContinue: TButton
+    Left = 8
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Continue'
+    OnClick = BGlobalContinueClick
+    TabOrder = 2
+  end
+  object BPartialStart: TButton
+    Left = 8
+    Height = 25
+    Top = 240
+    Width = 75
+    Caption = 'Partial Start'
+    OnClick = BPartialStartClick
+    TabOrder = 3
+  end
+  object LabelClockPartial: TLabel
+    Left = 96
+    Height = 217
+    Top = 220
+    Width = 528
+    Caption = '10:00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -192
+    Font.Name = 'Liberation Sans Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object BPartialStop: TButton
+    Left = 8
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Partial Stop'
+    OnClick = BPartialStopClick
+    TabOrder = 4
+  end
+  object MemoLog: TMemo
+    Left = 392
+    Height = 82
+    Top = 442
+    Width = 232
+    TabOrder = 5
+  end
+  object BGlobalReset: TButton
+    Left = 8
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'Reset'
+    OnClick = BGlobalResetClick
+    TabOrder = 6
+  end
+  object BPartialReset: TButton
+    Left = 8
+    Height = 25
+    Top = 336
+    Width = 75
+    Caption = 'Partial Reset'
+    OnClick = BPartialResetClick
+    TabOrder = 7
+  end
+  object BPartialLap: TButton
+    Left = 8
+    Height = 25
+    Top = 304
+    Width = 75
+    Caption = 'Partial Lap'
+    OnClick = BPartialLapClick
+    TabOrder = 8
+  end
+  object LabelMA1: TLabel
+    Left = 96
+    Height = 36
+    Top = 444
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = LabelMachineClick
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA2: TLabel
+    Tag = 1
+    Left = 164
+    Height = 36
+    Top = 444
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA3: TLabel
+    Tag = 2
+    Left = 96
+    Height = 36
+    Top = 488
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA4: TLabel
+    Tag = 3
+    Left = 164
+    Height = 36
+    Top = 488
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA5: TLabel
+    Tag = 4
+    Left = 248
+    Height = 36
+    Top = 444
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA6: TLabel
+    Tag = 5
+    Left = 316
+    Height = 36
+    Top = 444
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA7: TLabel
+    Tag = 6
+    Left = 248
+    Height = 36
+    Top = 488
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object LabelMA8: TLabel
+    Tag = 7
+    Left = 316
+    Height = 36
+    Top = 488
+    Width = 63
+    Caption = '00.0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Arial Narrow'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseDown = LabelMachineMouseDown
+  end
+  object Timer: TTimer
+    Interval = 50
+    OnTimer = TimerTimer
+    left = 160
+    top = 32
+  end
+  object MainMenu: TMainMenu
+    left = 52
+    top = 193
+    object MenuGlobal: TMenuItem
+      Caption = '&Global'
+      object MenuGlobalStart: TMenuItem
+        Caption = '&Start'
+        ShortCut = 48
+        OnClick = MenuGlobalStartClick
+      end
+    end
+    object MenuPartial: TMenuItem
+      Caption = '&Partial'
+      object MenuPartialStart: TMenuItem
+        Caption = '&Start'
+        ShortCut = 13
+        OnClick = MenuPartialStartClick
+      end
+      object MenuPartialLap: TMenuItem
+        Caption = '&Lap'
+        ShortCut = 32
+        OnClick = MenuPartialLapClick
+      end
+    end
+  end
+  object IPCClient: TSimpleIPCClient
+    Active = False
+    left = 52
+    top = 156
+  end
+end
