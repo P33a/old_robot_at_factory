@@ -1,0 +1,68 @@
+object FMain: TFMain
+  Left = 398
+  Height = 240
+  Top = 131
+  Width = 320
+  Caption = 'Robo@Factoy WiFi Test'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  OnShow = FormShow
+  SessionProperties = 'EditIP.Text;EditSend.Text'
+  LCLVersion = '1.8.2.0'
+  object EditSend: TEdit
+    Left = 80
+    Height = 23
+    Top = 6
+    Width = 56
+    TabOrder = 0
+    Text = 'RGBGR'
+  end
+  object MemoIn: TMemo
+    Left = 4
+    Height = 202
+    Top = 36
+    Width = 314
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 144
+    Height = 15
+    Top = 8
+    Width = 13
+    Caption = 'IP:'
+    ParentColor = False
+  end
+  object BSend: TButton
+    Left = 8
+    Height = 25
+    Top = 4
+    Width = 63
+    Caption = 'Send'
+    OnClick = BSendClick
+    TabOrder = 2
+  end
+  object EditIP: TEdit
+    Left = 164
+    Height = 23
+    Top = 6
+    Width = 92
+    TabOrder = 3
+    Text = '127.0.0.1'
+  end
+  object UDP: TLUDPComponent
+    Port = 0
+    OnReceive = UDPReceive
+    Timeout = 0
+    left = 248
+    top = 164
+  end
+  object IniPropStorage: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'config.ini'
+    IniSection = 'Main'
+    left = 200
+    top = 112
+  end
+end
